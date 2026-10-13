@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#140f1a" />
+  <meta name="description" content="Om Sharma — CSE student building for the web. Frontend, backend, full stack, Java, C, C++, Excel and a beginner's curiosity for cloud." />
+  <meta property="og:title" content="Om Sharma — Portfolio" />
+  <meta property="og:description" content="A cute little corner of the internet: skills, projects and a learning journey." />
+  <meta property="og:type" content="website" />
+  <title>Om Sharma — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-lock">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="curtain" id="curtain" aria-hidden="true"><span>♥</span></div>
+
+  <!-- INTRO -->
+  <div class="intro" id="intro" role="dialog" aria-label="Welcome">
+    <div class="intro-bg" aria-hidden="true">
+      <i style="--x:12%;--y:22%;--s:1.6rem;--d:0s">✦</i><i style="--x:82%;--y:18%;--s:1.2rem;--d:.6s">♥</i>
+      <i style="--x:20%;--y:76%;--s:1.1rem;--d:1.1s">✧</i><i style="--x:76%;--y:70%;--s:1.8rem;--d:.3s">✿</i>
+      <i style="--x:50%;--y:10%;--s:1rem;--d:.9s">♥</i><i style="--x:90%;--y:46%;--s:1rem;--d:1.4s">✦</i>
+      <i style="--x:6%;--y:50%;--s:1.2rem;--d:.2s">♥</i>
+    </div>
+    <p class="intro-hello">hello, world ✿</p>
+    <h1 class="intro-name" aria-label="Om Sharma">
+      <span class="big" aria-hidden="true"><b>O</b><b>m</b></span>
+      <small aria-hidden="true">Sharma</small>
+    </h1>
+    <p class="intro-sub">welcome to my little corner of the internet</p>
+    <div class="loader" aria-hidden="true">
+      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div><span class="loader-heart" id="loaderHeart">♥</span></div>
+      <span class="loader-pct" id="loaderPct">0%</span>
+    </div>
+    <button class="skip" id="skipIntro" type="button">skip ✿</button>
+  </div>
+
+  <!-- NAV -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Om Sharma — home"><b>Om</b><small>Sharma</small></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#about" data-spy="about">about</a>
+      <a href="#skills" data-spy="skills">skills</a>
+      <a href="#projects" data-spy="projects">projects</a>
+      <a href="#contact" class="nav-cta" data-spy="contact">say hi ♥</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="chip-live pop" style="--d:.05s"><span class="dot"></span> open to learning &amp; building</p>
+        <h1 class="hero-title pop" style="--d:.15s" aria-label="Hi, I'm Om Sharma">
+          <span class="hi">Hi, I'm</span>
+          <span class="name"><span class="om">Om</span><span class="sharma">Sharma</span></span>
+        </h1>
+        <p class="typed-line pop" style="--d:.3s">I'm into <span class="typed" id="typed">frontend</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-text pop" style="--d:.42s">A computer science student who loves turning ideas into things you can actually click — from the pixels you see to the logic working quietly behind them.</p>
+        <div class="hero-actions pop" style="--d:.55s">
+          <a class="btn btn-pink" href="#projects">see my work <span>✦</span></a>
+          <a class="btn btn-ghost" href="#contact">let's connect <span>♥</span></a>
+        </div>
+      </div>
+
+      <div class="hero-art pop" style="--d:.35s" aria-hidden="true">
+        <div class="glow"></div>
+        <svg class="mascot" id="mascot" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3d3"/><stop offset="1" stop-color="#ff7fb2"/></linearGradient>
+          </defs>
+          <ellipse cx="150" cy="276" rx="78" ry="10" fill="#000" opacity=".25"/>
+          <path d="M70 120 L62 52 Q61 40 72 46 L118 78 Z" fill="#ff8fbf"/>
+          <path d="M230 120 L238 52 Q239 40 228 46 L182 78 Z" fill="#ff8fbf"/>
+          <path d="M76 100 L72 66 L102 86 Z" fill="#ffd0e3"/>
+          <path d="M224 100 L228 66 L198 86 Z" fill="#ffd0e3"/>
+          <ellipse cx="150" cy="172" rx="108" ry="98" fill="url(#bodyG)"/>
+          <ellipse cx="108" cy="140" rx="30" ry="16" fill="#fff" opacity=".18" transform="rotate(-20 108 140)"/>
+          <g class="eyes">
+            <circle cx="108" cy="168" r="19" fill="#fff"/><circle cx="192" cy="168" r="19" fill="#fff"/>
+            <g id="pupils"><circle class="pupil" cx="108" cy="168" r="10" fill="#2a1630"/><circle class="pupil" cx="192" cy="168" r="10" fill="#2a1630"/>
+            <circle class="shine" cx="104" cy="164" r="3.4" fill="#fff"/><circle class="shine" cx="188" cy="164" r="3.4" fill="#fff"/></g>
+          </g>
+          <ellipse cx="78" cy="204" rx="17" ry="10" fill="#ff5f9e" opacity=".45"/>
+          <ellipse cx="222" cy="204" rx="17" ry="10" fill="#ff5f9e" opacity=".45"/>
+          <path d="M136 205 Q143 216 150 205 Q157 216 164 205" fill="none" stroke="#2a1630" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M150 262 q-12 -10 -12 -18 a7 7 0 0 1 12 -4 a7 7 0 0 1 12 4 q0 8 -12 18z" fill="#fff" opacity=".0"/>
+        </svg>
+        <span class="sticker s1">{ frontend }</span>
+        <span class="sticker s2">☕ java</span>
+        <span class="sticker s3">☁ cloud · beginner</span>
+        <span class="sticker s4">▦ excel</span>
+        <span class="spark sp1">✦</span><span class="spark sp2">♥</span><span class="spark sp3">✧</span>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span>scroll a little</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="head reveal"><h2>a little about me<span class="dot-pink">.</span></h2><i>✿</i></div>
+      <div class="about-grid">
+        <div class="about-big reveal">
+          <p class="lead">Curious mind,<br /><span>beginner's heart.</span></p>
+        </div>
+        <div class="about-copy reveal">
+          <p>I'm <strong>Om Sharma</strong>, a CSE student who enjoys building for the web — designing the parts people see and wiring up the parts they don't. I work with <strong>C, C++ and Java</strong> for strong programming fundamentals, and bring it all together through <strong>full stack web development</strong>.</p>
+          <p>I also love making messy data make sense in <strong>Excel</strong>, and I'm just taking my first steps into <strong>cloud</strong>. I'm honest about being a beginner there — and excited to grow.</p>
+          <div class="pills"><span>learning by doing</span><span>curiosity first</span><span>one step at a time</span><span>progress over perfection</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills section" id="skills">
+      <div class="head reveal"><h2>my toolkit<span class="dot-pink">.</span></h2><i>✿</i></div>
+      <p class="sub reveal">Hearts show how comfortable I feel with each thing — a growing list, not a finished one.</p>
+      <div class="skill-grid">
+        <article class="card skill reveal" data-level="4"><div class="ico">🎨</div><h3>Frontend</h3><p>Responsive, friendly interfaces that feel good to use.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div><div class="level" data-label="comfortable"></div></article>
+        <article class="card skill reveal" data-level="3"><div class="ico">⚙️</div><h3>Backend</h3><p>Server logic, databases and the data flow behind the screen.</p><div class="chips"><span>Django</span><span>Python</span><span>MySQL</span><span>CRUD</span></div><div class="level" data-label="getting good"></div></article>
+        <article class="card skill reveal" data-level="3"><div class="ico">🧩</div><h3>Full stack web dev</h3><p>Connecting frontend and backend into one working product.</p><div class="chips"><span>End-to-end</span><span>Forms &amp; auth</span><span>Databases</span><span>Git &amp; GitHub</span></div><div class="level" data-label="getting good"></div></article>
+        <article class="card skill reveal" data-level="3"><div class="ico">☕</div><h3>Java</h3><p>Object-oriented thinking and clean, structured code.</p><div class="chips"><span>OOP</span><span>Collections</span><span>Problem solving</span></div><div class="level" data-label="getting good"></div></article>
+        <article class="card skill reveal" data-level="3"><div class="ico">🔧</div><h3>C</h3><p>Close-to-the-metal basics: memory, pointers and logic.</p><div class="chips"><span>Pointers</span><span>Arrays</span><span>Data structures</span></div><div class="level" data-label="getting good"></div></article>
+        <article class="card skill reveal" data-level="3"><div class="ico">🚀</div><h3>C++</h3><p>Classes, STL and the habit of thinking about efficiency.</p><div class="chips"><span>OOP</span><span>STL</span><span>Algorithms</span></div><div class="level" data-label="getting good"></div></article>
+        <article class="card skill reveal" data-level="4"><div class="ico">📊</div><h3>Excel</h3><p>Turning rows and columns into clear answers.</p><div class="chips"><span>Formulas</span><span>Pivot tables</span><span>Charts</span><span>Cleanup</span></div><div class="level" data-label="comfortable"></div></article>
+        <article class="card skill reveal" data-level="1"><div class="ico">☁️</div><h3>Cloud</h3><p>Just starting out — exploring how modern apps run and ship.</p><div class="chips"><span>Cloud basics</span><span>Linux</span><span>Deployment</span></div><div class="level" data-label="beginner"></div></article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="head reveal"><h2>learning by building<span class="dot-pink">.</span></h2><i>✿</i></div>
+      <p class="sub reveal">Small steps turn into real experience.</p>
+      <div class="proj-list">
+        <article class="card proj reveal">
+          <div class="proj-art art-paw"><span class="paw">🐾</span><em>care starts here</em></div>
+          <div class="proj-info">
+            <span class="tag">academic project</span>
+            <h3>Shelter</h3>
+            <p>An animal rescue management project: animal profiles, volunteer details, adoption information and donations — all in one place.</p>
+            <div class="chips"><span>Django</span><span>HTML / CSS</span><span>JavaScript</span><span>MySQL</span></div>
+          </div>
+        </article>
+        <article class="card proj reveal">
+          <div class="proj-art art-site"><div class="mini"><div class="mini-top"><i></i><i></i><i></i></div><b>hello, world<span>.</span></b><div class="bar"></div><div class="bar short"></div></div></div>
+          <div class="proj-info">
+            <span class="tag">personal project · you're looking at it</span>
+            <h3>This portfolio</h3>
+            <p>A cute dark-and-pink corner of the internet to share my skills and progress, with animated intro, smooth page transitions and a fully responsive layout.</p>
+            <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SVG</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="contact-card reveal">
+        <span class="spark c1">✦</span><span class="spark c2">♥</span><span class="spark c3">✧</span>
+        <h2>Have an idea?<br /><span>Let's talk.</span></h2>
+        <p>Always happy to connect with fellow learners, developers and people who love making things.</p>
+        <div class="contact-actions" id="contactActions">
+          <a class="btn btn-pink" data-link="email" href="#" hidden>say hello <span>♥</span></a>
+          <button class="btn btn-ghost" id="copyEmail" type="button" hidden>copy email <span>✿</span></button>
+          <a class="btn btn-ghost" data-link="github" href="#" target="_blank" rel="noopener noreferrer" hidden>GitHub <span>✦</span></a>
+          <a class="btn btn-ghost" data-link="linkedin" href="#" target="_blank" rel="noopener noreferrer" hidden>LinkedIn <span>✦</span></a>
+        </div>
+        <p class="soon" id="contactSoon" hidden>my contact links are on their way ✿</p>
+        <form class="msg-form" id="msgForm" novalidate hidden>
+          <h3>send me a message ♥</h3>
+          <div class="row">
+            <label>your name<input type="text" id="fName" autocomplete="name" placeholder="e.g. Riya" required /></label>
+            <label>your email <em>(optional)</em><input type="email" id="fEmail" autocomplete="email" placeholder="so I can reply" /></label>
+          </div>
+          <label>message<textarea id="fMsg" rows="4" placeholder="Hi Om, I'd love to talk about…" required></textarea></label>
+          <button class="btn btn-pink" type="submit">send message <span>✦</span></button>
+        </form>
+        <ul class="info" id="contactInfo">
+          <li data-info="email" hidden><span class="i">✉️</span><div><small>email</small><a href="#"></a></div></li>
+          <li data-info="phone" hidden><span class="i">📞</span><div><small>phone</small><a href="#"></a></div></li>
+          <li data-info="github" hidden><span class="i">💻</span><div><small>github</small><a href="#" target="_blank" rel="noopener noreferrer"></a></div></li>
+          <li data-info="linkedin" hidden><span class="i">💼</span><div><small>linkedin</small><a href="#" target="_blank" rel="noopener noreferrer"></a></div></li>
+          <li data-info="location" hidden><span class="i">📍</span><div><small>location</small><span class="val"></span></div></li>
+        </ul>
+        <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home" aria-label="Back to top"><b>Om</b><small>Sharma</small></a>
+    <p>made with patience, curiosity &amp; lots of ♥ · <span id="year">2026</span></p>
+    <a class="back-top" href="#home">back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
